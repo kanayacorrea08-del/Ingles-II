@@ -1107,6 +1107,19 @@ Finally, check the results.</code></pre>
                 out.textContent = 'Llevas ' + count + ' conectores. Intenta incluir al menos 4.';
             }
         };
+
+        window.checkAct5 = window.checkAct5 || function() {
+            var a = document.getElementById('act5-a').value;
+            var b = document.getElementById('act5-b').value;
+            var c = document.getElementById('act5-c').value;
+            var d = document.getElementById('act5-d').value;
+            var e = document.getElementById('act5-e').value;
+            var out = document.getElementById('act5-result');
+            if (!out) return;
+            var ok = (a === 'first' && b === 'next' && c === 'then' && d === 'afterthat' && e === 'finally');
+            out.style.color = ok ? '#166534' : '#b91c1c';
+            out.textContent = ok ? 'Excelente. Elegiste conectores con intencion comunicativa correcta.' : 'Revisa la intencion: inicio, continuidad, accion principal, paso posterior y cierre.';
+        };
     })();
 </script>
 <div data-speech-segment="contenido-0"><h3 class="text-xl font-bold text-green-800 mb-3 mt-6">Buenas prácticas al usar sequencing expressions:</h3></div>
@@ -1308,6 +1321,24 @@ Finally, check the results.</code></pre>
                             <button onclick="checkDragSequence()" style="background:#16a34a;color:white;border:none;border-radius:8px;padding:7px 12px;font-size:13px;font-weight:600;cursor:pointer;">Verificar drag & drop</button>
                             <button onclick="resetDragSequence()" style="background:#0f766e;color:white;border:none;border-radius:8px;padding:7px 12px;font-size:13px;font-weight:600;cursor:pointer;">Reiniciar</button>
                             <div id="drag-result" style="font-size:13px;color:#475569;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-speech-segment="actividades-0">
+                    <div class="my-6" style="background:white;border-radius:0.75rem;padding:1.25rem 1.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.06);">
+                        <h4 class="text-lg font-bold text-green-800 mb-3">Actividad 5. Conector correcto según intención</h4>
+                        <p class="text-slate-700 mb-3">Selecciona el conector que mejor cumple la intención comunicativa.</p>
+                        <div class="text-slate-700 space-y-2">
+                            <p>1. Para iniciar una guía técnica usamos: <select id="act5-a" style="border:1px solid #bbf7d0;border-radius:8px;padding:4px 8px;"><option value="">Selecciona</option><option value="first">First</option><option value="next">Next</option><option value="finally">Finally</option></select></p>
+                            <p>2. Para continuar con el siguiente paso usamos: <select id="act5-b" style="border:1px solid #bbf7d0;border-radius:8px;padding:4px 8px;"><option value="">Selecciona</option><option value="then">Then</option><option value="next">Next</option><option value="afterthat">After that</option></select></p>
+                            <p>3. Para mostrar una acción principal después del inicio usamos: <select id="act5-c" style="border:1px solid #bbf7d0;border-radius:8px;padding:4px 8px;"><option value="">Selecciona</option><option value="finally">Finally</option><option value="then">Then</option><option value="first">First</option></select></p>
+                            <p>4. Para un paso posterior usamos: <select id="act5-d" style="border:1px solid #bbf7d0;border-radius:8px;padding:4px 8px;"><option value="">Selecciona</option><option value="next">Next</option><option value="afterthat">After that</option><option value="first">First</option></select></p>
+                            <p>5. Para cerrar el procedimiento usamos: <select id="act5-e" style="border:1px solid #bbf7d0;border-radius:8px;padding:4px 8px;"><option value="">Selecciona</option><option value="then">Then</option><option value="afterthat">After that</option><option value="finally">Finally</option></select></p>
+                        </div>
+                        <div style="display:flex;gap:8px;align-items:center;margin-top:12px;">
+                            <button onclick="checkAct5()" style="background:#0f766e;color:white;border:none;border-radius:8px;padding:7px 12px;font-size:13px;font-weight:600;cursor:pointer;">Validar</button>
+                            <div id="act5-result" style="font-size:13px;color:#475569;"></div>
                         </div>
                     </div>
                 </div>
