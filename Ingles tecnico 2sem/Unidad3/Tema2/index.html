@@ -596,6 +596,156 @@
         /* ===== NAV ITEMS ===== */
         .nav-item:hover { background-color: #15803d; }
         .nav-item.active { background-color: #166534; font-weight: 600; }
+    
+
+        /* ===== INTERACTIVE U3 BOOST ===== */
+        .interactive-panel {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 0.5rem 0 1rem;
+            padding: 0.9rem 1rem;
+            background: linear-gradient(135deg, #eafff1, #ecfeff);
+            border: 1px solid #bbf7d0;
+            border-radius: 0.8rem;
+        }
+
+        .interactive-panel .interactive-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #166534;
+            margin-right: 0.35rem;
+        }
+
+        .interactive-chip {
+            border: none;
+            border-radius: 999px;
+            padding: 0.42rem 0.8rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+        }
+
+        .interactive-chip:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 14px rgba(22, 163, 74, 0.18);
+        }
+
+        .interactive-chip.is-green {
+            background: #16a34a;
+            color: #fff;
+        }
+
+        .interactive-chip.is-slate {
+            background: #e2e8f0;
+            color: #334155;
+        }
+
+        #contenido .content-reveal-card {
+            transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease, background-color 0.24s ease;
+            border: 1px solid #bbf7d0 !important;
+            border-radius: 0.75rem;
+        }
+
+        #contenido .content-reveal-card:hover,
+        #contenido .content-reveal-card.is-active {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(15, 118, 110, 0.12);
+            border-color: #16a34a !important;
+            background-color: #f0fdf4 !important;
+        }
+
+        #contenido .micro-tip {
+            margin-top: 0.6rem;
+            padding: 0.55rem 0.7rem;
+            border-radius: 0.6rem;
+            background: #ecfeff;
+            color: #0f766e;
+            font-size: 0.83rem;
+            border: 1px dashed #67e8f9;
+            display: none;
+        }
+
+        #contenido.show-tips .micro-tip {
+            display: block;
+            animation: fadeInTip 0.35s ease;
+        }
+
+        @keyframes fadeInTip {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .ova-focus-mode #contenido .content-reveal-card {
+            opacity: 0.5;
+            transform: scale(0.99);
+        }
+
+        .ova-focus-mode #contenido .content-reveal-card.is-active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .activity-progress-widget {
+            margin: 0.2rem 0 1rem;
+            background: #ffffff;
+            border: 1px solid #bbf7d0;
+            border-radius: 0.8rem;
+            padding: 0.85rem 1rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        }
+
+        .activity-progress-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 0.55rem;
+        }
+
+        .activity-progress-head strong {
+            color: #166534;
+            font-size: 0.92rem;
+        }
+
+        .activity-progress-bar {
+            width: 100%;
+            height: 10px;
+            border-radius: 999px;
+            background: #e2e8f0;
+            overflow: hidden;
+        }
+
+        .activity-progress-fill {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #22c55e, #06b6d4);
+            transition: width 0.35s ease;
+        }
+
+        .activity-progress-tip {
+            margin-top: 0.5rem;
+            font-size: 0.82rem;
+            color: #475569;
+        }
+
+        #evaluacion input[type="text"],
+        #evaluacion input[placeholder="A-D"],
+        #evaluacion input[style*="width:50px"] {
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        #evaluacion .input-valid {
+            border-color: #22c55e !important;
+            box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
+        }
+
+        #evaluacion .input-invalid {
+            border-color: #ef4444 !important;
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+        }
     </style>
 </head>
 <body class="bg-slate-50">
@@ -765,13 +915,21 @@
                 </div>
 
                 <div data-speech-segment="contenido-0">
-                    <div class="code-block-wrapper my-6">
-                        <div class="code-block-header"><span class="code-block-lang">structure</span><button class="code-copy-btn" onclick="copyCode(this)">Copiar</button></div>
-                        <pre class="code-block"><code>Subject + verb to be + verb-ing + complement
-
-Technology is changing very fast.
-Automation is improving industrial processes.
-Digital platforms are becoming more interactive.</code></pre>
+                    <div class="my-6 bg-white border-l-4 border-green-500 p-6 rounded-lg shadow-sm">
+                        <h4 class="text-lg font-bold text-green-800 mb-3">Language guide: describing trends</h4>
+                        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;">
+                            <div style="background:#f8fafc;border:1px solid #bbf7d0;border-radius:10px;padding:12px;">
+                                <p class="text-slate-800 font-semibold mb-2">Basic structure</p>
+                                <p class="text-slate-700">Subject + <strong>verb to be</strong> + <strong>verb-ing</strong> + complement</p>
+                                <p class="text-slate-700 mt-2"><strong>Example:</strong> Technology is changing very fast.</p>
+                            </div>
+                            <div style="background:#f8fafc;border:1px solid #bbf7d0;border-radius:10px;padding:12px;">
+                                <p class="text-slate-800 font-semibold mb-2">Useful patterns</p>
+                                <p class="text-slate-700">is growing, is becoming more common, is evolving rapidly</p>
+                                <p class="text-slate-700 mt-2"><strong>Example:</strong> Digital platforms are becoming more interactive.</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-700 mt-3"><strong>Reminder:</strong> use this structure to report ongoing changes in technology.</p>
                     </div>
                 </div>
             </div>
@@ -779,8 +937,8 @@ Digital platforms are becoming more interactive.</code></pre>
             <!-- Actividades -->
             <div id="actividades" class="content-pane ">
                 <div data-speech-segment="actividades-0">
-                    <div class="bg-white border-l-4 border-green-500 p-6 my-6 rounded-lg shadow-sm">
                     <h2 class="text-4xl font-bold text-green-800 mb-6">Actividades</h2>
+<div class="bg-white border-l-4 border-green-500 p-6 my-6 rounded-lg shadow-sm">
 </div>
                 </div>
 
@@ -922,9 +1080,9 @@ Digital platforms are becoming more interactive.</code></pre>
             <!-- Recursos -->
             <div id="recursos" class="content-pane ">
                 <div data-speech-segment="recursos-0">
-                <ul class="space-y-4 mb-6" style="max-width: 100%; list-style: none; padding: 4px 4px 8px 4px; overflow: visible;">
-                    <li class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500" style="display:flex;flex-direction:row;align-items:center;justify-content:space-between;"><div style="flex:1;min-width:0;"><h3 class="font-bold text-green-700">British Council LearnEnglish - Recursos para vocabulario y práctica</h3>
                     <h2 class="text-4xl font-bold text-green-800 mb-6">Recursos</h2>
+<ul class="space-y-4 mb-6" style="max-width: 100%; list-style: none; padding: 4px 4px 8px 4px; overflow: visible;">
+                    <li class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500" style="display:flex;flex-direction:row;align-items:center;justify-content:space-between;"><div style="flex:1;min-width:0;"><h3 class="font-bold text-green-700">British Council LearnEnglish - Recursos para vocabulario y práctica</h3>
 <a href="https://learnenglish.britishcouncil.org/" target="_blank" class="underline text-slate-700 hover:text-green-700">Ir al recurso</a></div><div style="margin-left:1.5rem;flex-shrink:0;"><div style="width:2cm;height:2cm;padding:5px;background-color:#f0fdf4;border:1px solid #86efac;border-radius:4px;display:flex;align-items:center;justify-content:center;"><img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Flearnenglish.britishcouncil.org%2F" alt="QR British Council LearnEnglish" style="max-width:100%;max-height:100%;object-fit:contain;" loading="lazy"></div></div></li>
                     <li class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500" style="display:flex;flex-direction:row;align-items:center;justify-content:space-between;"><div style="flex:1;min-width:0;"><h3 class="font-bold text-green-700">Cambridge Dictionary - Significado, uso y ejemplos de vocabulario tecnológico</h3><a href="https://dictionary.cambridge.org/" target="_blank" class="underline text-slate-700 hover:text-green-700">Ir al recurso</a></div><div style="margin-left:1.5rem;flex-shrink:0;"><div style="width:2cm;height:2cm;padding:5px;background-color:#f0fdf4;border:1px solid #86efac;border-radius:4px;display:flex;align-items:center;justify-content:center;"><img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fdictionary.cambridge.org%2F" alt="QR Cambridge Dictionary" style="max-width:100%;max-height:100%;object-fit:contain;" loading="lazy"></div></div></li>
                 </ul></div>
@@ -1559,6 +1717,145 @@ Digital platforms are becoming more interactive.</code></pre>
                 Object.keys(window.__hotspots || {}).forEach(function(id) { renderHotspots(id); });
             });
         })();
+    </script>
+    <script nonce="MzUwNjY0MzY0OSwxNTgwMDM5MTE2">
+        // INTERACTIVE U3 BOOST
+        document.addEventListener('DOMContentLoaded', function() {
+            var contentPane = document.getElementById('contenido');
+            if (contentPane && !contentPane.querySelector('.interactive-panel')) {
+                var panel = document.createElement('div');
+                panel.className = 'interactive-panel';
+                panel.innerHTML = '' +
+                    '<span class="interactive-title">Modo interactivo:</span>' +
+                    '<button type="button" class="interactive-chip is-green" id="toggle-tips-btn">Mostrar pistas</button>' +
+                    '<button type="button" class="interactive-chip is-slate" id="toggle-focus-btn">Modo enfoque</button>';
+
+                var heading = contentPane.querySelector('h2');
+                if (heading && heading.parentNode) {
+                    heading.parentNode.insertBefore(panel, heading.nextSibling);
+                } else {
+                    contentPane.insertBefore(panel, contentPane.firstChild);
+                }
+
+                var revealCards = contentPane.querySelectorAll('div[style*="border:1px solid #bbf7d0"], .bg-white.border-l-4.border-green-500');
+                revealCards.forEach(function(card) {
+                    card.classList.add('content-reveal-card');
+                    if (!card.querySelector('.micro-tip')) {
+                        var tip = document.createElement('div');
+                        tip.className = 'micro-tip';
+                        tip.textContent = 'Tip: conecta esta idea con un ejemplo real de programación para memorizarla más rápido.';
+                        card.appendChild(tip);
+                    }
+
+                    card.addEventListener('click', function(e) {
+                        if (e.target.closest('button, a, input, select, textarea, img')) return;
+                        revealCards.forEach(function(c) { c.classList.remove('is-active'); });
+                        card.classList.add('is-active');
+                    });
+                });
+
+                var tipsBtn = document.getElementById('toggle-tips-btn');
+                var focusBtn = document.getElementById('toggle-focus-btn');
+
+                if (tipsBtn) {
+                    tipsBtn.addEventListener('click', function() {
+                        contentPane.classList.toggle('show-tips');
+                        tipsBtn.textContent = contentPane.classList.contains('show-tips') ? 'Ocultar pistas' : 'Mostrar pistas';
+                    });
+                }
+
+                if (focusBtn) {
+                    focusBtn.addEventListener('click', function() {
+                        document.body.classList.toggle('ova-focus-mode');
+                        focusBtn.classList.toggle('is-green');
+                        focusBtn.classList.toggle('is-slate');
+                        focusBtn.textContent = document.body.classList.contains('ova-focus-mode') ? 'Salir enfoque' : 'Modo enfoque';
+                    });
+                }
+            }
+
+            var actPane = document.getElementById('actividades');
+            if (actPane && !actPane.querySelector('.activity-progress-widget')) {
+                var inputs = actPane.querySelectorAll('input, select, textarea');
+                if (inputs.length) {
+                    var progress = document.createElement('div');
+                    progress.className = 'activity-progress-widget';
+                    progress.innerHTML = '' +
+                        '<div class="activity-progress-head">' +
+                            '<strong>Progreso de actividades</strong>' +
+                            '<span id="activity-progress-text">0%</span>' +
+                        '</div>' +
+                        '<div class="activity-progress-bar"><div id="activity-progress-fill" class="activity-progress-fill"></div></div>' +
+                        '<div class="activity-progress-tip" id="activity-progress-tip">Completa los campos para desbloquear retroalimentación más precisa.</div>';
+
+                    var h2 = actPane.querySelector('h2');
+                    if (h2 && h2.parentNode) {
+                        h2.parentNode.insertBefore(progress, h2.nextSibling);
+                    } else {
+                        actPane.insertBefore(progress, actPane.firstChild);
+                    }
+
+                    var progressText = document.getElementById('activity-progress-text');
+                    var progressFill = document.getElementById('activity-progress-fill');
+                    var progressTip = document.getElementById('activity-progress-tip');
+
+                    function countCompleted() {
+                        var completed = 0;
+                        inputs.forEach(function(el) {
+                            var tag = el.tagName.toLowerCase();
+                            if (tag === 'textarea') {
+                                if ((el.value || '').trim().length >= 12) completed++;
+                            } else if (el.type === 'checkbox' || el.type === 'radio') {
+                                if (el.checked) completed++;
+                            } else {
+                                if ((el.value || '').trim() !== '') completed++;
+                            }
+                        });
+                        var percent = Math.round((completed / inputs.length) * 100);
+                        progressText.textContent = percent + '%';
+                        progressFill.style.width = percent + '%';
+
+                        if (percent < 35) {
+                            progressTip.textContent = 'Vas comenzando. Intenta completar el primer ejercicio para tomar ritmo.';
+                        } else if (percent < 70) {
+                            progressTip.textContent = 'Buen avance. Estás a mitad de camino.';
+                        } else if (percent < 100) {
+                            progressTip.textContent = 'Excelente. Solo faltan unos campos para cerrar el tema.';
+                        } else {
+                            progressTip.textContent = 'Completaste todas las actividades. Puedes pasar a evaluación.';
+                        }
+                    }
+
+                    inputs.forEach(function(el) {
+                        el.addEventListener('input', countCompleted);
+                        el.addEventListener('change', countCompleted);
+                    });
+                    countCompleted();
+                }
+            }
+
+            var evalPane = document.getElementById('evaluacion');
+            if (evalPane) {
+                var evalInputs = evalPane.querySelectorAll('input');
+                evalInputs.forEach(function(input) {
+                    input.addEventListener('input', function() {
+                        var value = (input.value || '').trim().toUpperCase();
+                        if (value.length > 1) value = value.charAt(0);
+                        input.value = value;
+
+                        input.classList.remove('input-valid', 'input-invalid');
+                        if (!value) return;
+                        if (['A', 'B', 'C', 'D'].indexOf(value) >= 0 || value.length > 0) {
+                            if (['A', 'B', 'C', 'D'].indexOf(value) >= 0) {
+                                input.classList.add('input-valid');
+                            } else {
+                                input.classList.add('input-invalid');
+                            }
+                        }
+                    });
+                });
+            }
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" nonce="MzUwNjY0MzY0OSwxNTgwMDM5MTE2"></script>
     <script nonce="MzUwNjY0MzY0OSwxNTgwMDM5MTE2">
