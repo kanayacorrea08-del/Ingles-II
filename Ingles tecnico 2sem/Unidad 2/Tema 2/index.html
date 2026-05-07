@@ -685,22 +685,29 @@
             <div id="objetivos" class="content-pane ">
                 <div data-speech-segment="objetivos-0">
                     <h2 class="text-4xl font-bold text-green-800 mb-6">Objetivos de aprendizaje</h2>
-
-                <ul class="space-y-4 mb-6" style="max-width: 100%; list-style: none; padding: 4px 4px 8px 4px; overflow: visible;">
-                    
-                    <li class="flex items-start p-4 bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow" style="max-width: 100%; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; border-left: 4px solid #22c55e; cursor: default;">
-                        <span class="text-green-700 mr-3 text-2xl flex-shrink-0">✓</span>
-                        <span style="word-wrap: break-word; overflow-wrap: break-word; word-break: break-word; max-width: 100%;">Aplicar comparativos y superlativos para realizar comparaciones técnicas en programación (lenguajes, herramientas, dispositivos y sistemas).</span>
-                    </li>
-                    <li class="flex items-start p-4 bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow" style="max-width: 100%; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; border-left: 4px solid #22c55e; cursor: default;">
-                        <span class="text-green-700 mr-3 text-2xl flex-shrink-0">✓</span>
-                        <span style="word-wrap: break-word; overflow-wrap: break-word; word-break: break-word; max-width: 100%;">Utilizar estructuras gramaticales correctas para comparar dos elementos y destacar el nivel más alto dentro de un grupo.</span>
-                    </li>
-                    <li class="flex items-start p-4 bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow" style="max-width: 100%; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; border-left: 4px solid #22c55e; cursor: default;">
-                        <span class="text-green-700 mr-3 text-2xl flex-shrink-0">✓</span>
-                        <span style="word-wrap: break-word; overflow-wrap: break-word; word-break: break-word; max-width: 100%;">Analizar, evaluar y comunicar diferencias técnicas de manera clara y precisa en contextos profesionales.</span>
-                    </li>
-                </ul></div>
+                    <ul class="space-y-4 mb-6" style="list-style: none; padding: 0;">
+                        <li class="flex items-start p-4 bg-white rounded-lg shadow-sm">
+                            <span class="text-green-700 mr-3 text-2xl">📊</span>
+                            <span>Aplicar comparativos y superlativos para realizar comparaciones técnicas en programación (lenguajes, herramientas, dispositivos y sistemas).</span>
+                        </li>
+                        <li class="flex items-start p-4 bg-white rounded-lg shadow-sm">
+                            <span class="text-green-700 mr-3 text-2xl">🧠</span>
+                            <span>Utilizar estructuras gramaticales correctas para comparar dos elementos y destacar el nivel más alto dentro de un grupo.</span>
+                        </li>
+                        <li class="flex items-start p-4 bg-white rounded-lg shadow-sm">
+                            <span class="text-green-700 mr-3 text-2xl">💡</span>
+                            <span>Analizar, evaluar y comunicar diferencias técnicas de manera clara y precisa en contextos profesionales.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="speech-controls" data-speech-id="speech-objetivos-0" data-segment-index="0">
+                    <button class="play-btn"><span class="mr-1">▶️</span> Leer</button>
+                    <button class="pause-btn" disabled><span class="mr-1">⏸️</span> Pausar</button>
+                    <button class="stop-btn" disabled><span class="mr-1">⏹️</span> Detener</button>
+                    <label style="margin-left:8px;">Velocidad:
+                        <input type="range" class="speech-rate" min="0.8" max="1.4" step="0.1" value="1">
+                    </label>
+                </div>
             </div>
 
             <!-- Contenido -->
@@ -1271,44 +1278,47 @@
             <!-- Recursos -->
             <div id="recursos" class="content-pane ">
                 <div data-speech-segment="recursos-0">
-                <ul class="space-y-4 mb-6" style="max-width: 100%; list-style: none; padding: 4px 4px 8px 4px; overflow: visible;">
-                    
-                    <li class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500" style="display:flex;flex-direction:row;align-items:center;justify-content:space-between;">
-                        <div style="flex:1;min-width:0;"><h3 class="font-bold text-green-700">British Council - Comparative and superlative adjectives</h3>
-                    <h2 class="text-4xl font-bold text-green-800 mb-6">Recursos</h2>
-<a href="https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/comparative-superlative-adjectives" target="_blank" class="underline text-slate-700 hover:text-green-700">Ir al recurso</a>
-                        </div>
-                        <div style="margin-left:1.5rem;flex-shrink:0;">
-                            <div style="width:2cm;height:2cm;padding:5px;background-color:#f0fdf4;border:1px solid #86efac;border-radius:4px;display:flex;align-items:center;justify-content:center;">
-                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Flearnenglish.britishcouncil.org%2Fgrammar%2Fenglish-grammar-reference%2Fcomparative-superlative-adjectives" alt="QR British Council - Comparatives and superlatives" style="max-width:100%;max-height:100%;object-fit:contain;" loading="lazy">
+                    <h2 class="text-4xl font-bold text-green-800 mb-6">Recursos para profundizar</h2>
+                    <p class="text-slate-700 leading-relaxed mb-6">Para ampliar tu conocimiento sobre comparativos y superlativos en inglés técnico, te recomendamos explorar los siguientes recursos:</p>
+                    <ul class="space-y-4 mb-6" style="list-style: none; padding: 0;">
+                        <li class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500 flex flex-col sm:flex-row sm:items-center justify-between">
+                            <div>
+                                <h3 class="font-bold text-green-700">British Council - Comparative and superlative adjectives</h3>
+                                <p class="text-slate-600 mb-2">Explicaciones y ejercicios sobre comparativos y superlativos en inglés</p>
+                                <a href="https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/comparative-superlative-adjectives" target="_blank" class="underline text-slate-700 hover:text-green-700">Ir al recurso</a>
                             </div>
-                        </div>
-                    </li>
-                    <li class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500" style="display:flex;flex-direction:row;align-items:center;justify-content:space-between;">
-                        <div style="flex:1;min-width:0;">
-                            <h3 class="font-bold text-green-700">Cambridge Dictionary Grammar - Comparatives and superlatives</h3>
-                            
-                            <a href="https://dictionary.cambridge.org/grammar/" target="_blank" class="underline text-slate-700 hover:text-green-700">Ir al recurso</a>
-                        </div>
-                        <div style="margin-left:1.5rem;flex-shrink:0;">
-                            <div style="width:2cm;height:2cm;padding:5px;background-color:#f0fdf4;border:1px solid #86efac;border-radius:4px;display:flex;align-items:center;justify-content:center;">
-                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fdictionary.cambridge.org%2Fgrammar%2F" alt="QR Cambridge Dictionary Grammar" style="max-width:100%;max-height:100%;object-fit:contain;" loading="lazy">
+                            <div style="margin-left:1.5rem;flex-shrink:0;">
+                                <div style="width:2cm;height:2cm;padding:5px;background-color:#f0fdf4;border:1px solid #86efac;border-radius:4px;display:flex;align-items:center;justify-content:center;">
+                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Flearnenglish.britishcouncil.org%2Fgrammar%2Fenglish-grammar-reference%2Fcomparative-superlative-adjectives" alt="QR British Council - Comparatives and superlatives" style="max-width:100%;max-height:100%;object-fit:contain;" loading="lazy">
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500" style="display:flex;flex-direction:row;align-items:center;justify-content:space-between;">
-                        <div style="flex:1;min-width:0;">
-                            <h3 class="font-bold text-green-700">Atlassian - Git glossary for technical vocabulary</h3>
-                            
-                            <a href="https://www.atlassian.com/git/glossary" target="_blank" class="underline text-slate-700 hover:text-green-700">Ir al recurso</a>
-                        </div>
-                        <div style="margin-left:1.5rem;flex-shrink:0;">
-                            <div style="width:2cm;height:2cm;padding:5px;background-color:#f0fdf4;border:1px solid #86efac;border-radius:4px;display:flex;align-items:center;justify-content:center;">
-                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fwww.atlassian.com%2Fgit%2Fglossary" alt="QR Atlassian Git glossary" style="max-width:100%;max-height:100%;object-fit:contain;" loading="lazy">
+                        </li>
+                        <li class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500 flex flex-col sm:flex-row sm:items-center justify-between">
+                            <div>
+                                <h3 class="font-bold text-green-700">Cambridge Dictionary Grammar - Comparatives and superlatives</h3>
+                                <p class="text-slate-600 mb-2">Referencia gramatical sobre comparativos y superlativos con ejemplos técnicos</p>
+                                <a href="https://dictionary.cambridge.org/grammar/" target="_blank" class="underline text-slate-700 hover:text-green-700">Ir al recurso</a>
                             </div>
-                        </div>
-                    </li>
-                </ul></div>
+                            <div style="margin-left:1.5rem;flex-shrink:0;">
+                                <div style="width:2cm;height:2cm;padding:5px;background-color:#f0fdf4;border:1px solid #86efac;border-radius:4px;display:flex;align-items:center;justify-content:center;">
+                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fdictionary.cambridge.org%2Fgrammar%2F" alt="QR Cambridge Dictionary Grammar" style="max-width:100%;max-height:100%;object-fit:contain;" loading="lazy">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500 flex flex-col sm:flex-row sm:items-center justify-between">
+                            <div>
+                                <h3 class="font-bold text-green-700">Atlassian - Git glossary for technical vocabulary</h3>
+                                <p class="text-slate-600 mb-2">Glosario técnico en inglés para ampliar vocabulario de programación</p>
+                                <a href="https://www.atlassian.com/git/glossary" target="_blank" class="underline text-slate-700 hover:text-green-700">Ir al recurso</a>
+                            </div>
+                            <div style="margin-left:1.5rem;flex-shrink:0;">
+                                <div style="width:2cm;height:2cm;padding:5px;background-color:#f0fdf4;border:1px solid #86efac;border-radius:4px;display:flex;align-items:center;justify-content:center;">
+                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fwww.atlassian.com%2Fgit%2Fglossary" alt="QR Atlassian Git glossary" style="max-width:100%;max-height:100%;object-fit:contain;" loading="lazy">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <!-- Bibliografía -->
